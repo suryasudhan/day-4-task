@@ -1,208 +1,184 @@
-// QUESTION-1:
-// a.PRINT ODD NUMBERS IN Array
+// // QUESTION-1:
+ // a.PRINT ODD NUMBERS IN Array
+// Anonymous Function:
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-(function (array) {
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] % 2 != 0) {
-      console.log(array[i]);
+(function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      console.log(arr[i]);
     }
   }
 })(array);
 
-// we call this function=>
-var array=[1,2,3,4,5,6,7,8,9,];
-let abc=function (array){
-    for(var i = 0 ; i< array.length ; i++){
-          if(array[i]%2!=0){
-              console.log(array[i]);
-          } 
-     }
-  }abc(array);
- 
-
-// IMMEDIATELY INVOKED FUNCTION Expression (IIFE)
+// Function Call:
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-(function (array) {
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] % 2 !== 0) {
-      console.log(array[i]);
+let abc = function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      console.log(arr[i]);
+    }
+  }
+};
+abc(array);
+
+// IIFE:
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+(function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      console.log(arr[i]);
     }
   }
 })(array);
 
 
-
-// b.Convert all the strings to title caps in a string array
-anonymous : 
-var str="my name is ayesha";
-function (str) {
-   str = str.toLowerCase().split(' ');
-   for (var i = 0; i < str.length; i++) {
-     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-   } 
-   return str.join(' ');
-}(str)
-// we can call this function=>
-var str="my name is ayesha";
-let def=function (str) {
-   str = str.toLowerCase().split(' ');
-   for (var i = 0; i < str.length; i++) {
-     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-   } 
-   return str.join(' ');
-}
-def(str)
-
-IIFE :
-var str="my name is ayesha";
-(function (str) {
-   str = str.toLowerCase().split(' ');
-   for (var i = 0; i < str.length; i++) {
-     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-   } 
-   return str.join(' ');
+// // b.Convert all the strings to title caps in a string array
+// Anonymous Function:
+var str = "my name is surya";
+(function (inputStr) {
+  var strArray = inputStr.toLowerCase().split(" ");
+  for (var i = 0; i < strArray.length; i++) {
+    strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1);
+  }
+  console.log(strArray.join(" "));
 })(str);
 
-// c.Sum of all numbers in an array
-Anonymous:
-var a=[1,2,3,4,5,6,7,8,9];
-var sum=0;
-function (a)
-{
-   for(let i=0; i<a.length; i++)
-   {
-     sum=sum+a[i];
-   }
-   return sum;
-}(a);
-// we can use this function =>
-var a=[1,2,3,4,5,6,7,8,9];
-var sum=0;
-let ghi=function (a)
-{
-   for(let i=0; i<a.length; i++)
-   {
-     sum=sum+a[i];
-   }
-   return sum;
-}
-ghi(a);
+// Function Call:
+var str = "my name is surya";
+let def = function (inputStr) {
+  var strArray = inputStr.toLowerCase().split(' ');
+  for (var i = 0; i < strArray.length; i++) {
+    strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1);
+  }
+  return strArray.join(' ');
+};
+console.log(def(str));
 
-IIFE :
-var a=[1,2,3,4,5,6,7,8,9];
-var sum=0;
-(function (a)
-{
-   for(let i=0; i<a.length; i++)
-   {
-     sum=sum+a[i];
-   }
-   return sum;
+// IIFE:
+var str = "my name is surya";
+(function (inputStr) {
+  var strArray = inputStr.toLowerCase().split(' ');
+  for (var i = 0; i < strArray.length; i++) {
+    strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1);
+  }
+  console.log(strArray.join(' '));
+})(str);
+
+
+// // c.Sum of all numbers in an array
+// Anonymous:
+var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var sum = (function (arr) {
+  var s = 0;
+  for (let i = 0; i < arr.length; i++) {
+    s += arr[i];
+  }
+  return s;
 })(a);
 
-// d.Return all the prime numbers in an array
-// Anonymous Function:
-                 
+// Function Call:
+var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var sum = 0;
+let ghi = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+};
+console.log(ghi(a));
 
-let n3=34;
-function (n3)
-{
-   for(let i=2; i<=n3; i++)
-   {
-      let flag=0;
-      for(let j=2; j<i; j++)
-      {
-         if(i%j==0)
-         {
-            flag=1;
-            break;
-         }
+// IIFE:
+var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var sum = (function (arr) {
+  var s = 0;
+  for (let i = 0; i < arr.length; i++) {
+    s += arr[i];
+  }
+  return s;
+})(a);
+console.log(sum);
+
+// d.Return all the prime numbers in an array
+//  AnonymousFunction:
+let n3 = 34;
+(function (n) {
+  for (let i = 2; i <= n; i++) {
+    let flag = 0;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+        break;
       }
-      if(flag==0)
-      {
+    }
+    if (flag == 0) {
       console.log(i);
+    }
+  }
+})(n3);
+
+// Function Call:
+let n1 = 34;
+let l = function (n) {
+  for (let i = 2; i <= n; i++) {
+    let flag = 0;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+        break;
       }
-   }
-}
-(n3);
-// we can use this function =>
-let n1=34;
-let l=function (n1)
-{
-   for(let i=2; i<=n1; i++)
-   {
-      let flag=0;
-      for(let j=2; j<i; j++)
-      {
-         if(i%j==0)
-         {
-            flag=1;
-            break;
-         }
-      }
-      if(flag==0)
-      {
-         console.log(i);
-      }
-   }
-}
+    }
+    if (flag == 0) {
+      console.log(i);
+    }
+  }
+};
 l(n1);
 
-IIFE :
-let n2=34;
-(function (n2)
-{
-   for(let i=2; i<=n2; i++)
-   {
-      let flag=0;
-      for(let j=2; j<i; j++)
-      {
-         if(i%j==0)
-         {
-            flag=1;
-            break;
-         }
+// IIFE:
+let n6 = 34;
+(function (n) {
+  for (let i = 2; i <= n; i++) {
+    let flag = 0;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+        break;
       }
-      if(flag==0)
-      {
-         console.log(i);
-      }
-   }
-})(n2);
+    }
+    if (flag == 0) {
+      console.log(i);
+    }
+  }
+})(n6);
 
-// e.Return all the palindromes in an array
 
-AnonymousFunction :  function (arr, n)
-    {
-        // Traversing each element of the array
-        // and check if it is palindrome or not
-        for (let i = 0; i < n; i++)
-        {
-            let ans = isPalindrome(arr[i]);
-            if (ans == false)
-                return false;
-        }
-        return true;
-    }(arr,n)
+// // e.Return all the palindromes in an array
 
-    IIFE : 
+// Anonymous Function:
+(function (arr, n) {
+  for (let i = 0; i < n; i++) {
+    let ans = isPalindrome(arr[i]);
+    if (ans == false)
+      return false;
+  }
+  return true;
+}) ;
+// (arr,n);
 
-              (  function (arr, n)
-        {
-            // Traversing each element of the array
-            // and check if it is palindrome or not
-            for (let i = 0; i < n; i++)
-            {
-                let ans = isPalindrome(arr[i]);
-                if (ans == false)
-                    return false;
-            }
-            return true;
-        })([1,2,3] , 3)
-    
-// f.Return median of two sorted arrays of the same size.
-Anonymous:
-function(nums1, nums2) {
+// IIFE:
+(function (arr, n) {
+  for (let i = 0; i < n; i++) {
+    let ans = isPalindrome(arr[i]);
+    if (ans == false)
+      return false;
+  }
+  return true;
+}) ;
+// ([1, 2, 3], 3);
+
+// // f.Return median of two sorted arrays of the same size.
+// Anonymous:
+(function(nums1, nums2) {
    let s1= nums1.length
    let s2= nums2.length
    let index = s1+s2
@@ -224,7 +200,7 @@ function(nums1, nums2) {
        return (nums1[Math.floor(index/2)-1] + nums1[Math.floor(index/2)])/2
    }
    
-};
+});
 
 IIFE:
 (function(nums1, nums2) {
@@ -252,68 +228,45 @@ IIFE:
 });
 
 
-// g.Remove duplicates from an array
+// // g.Remove duplicates from an array
 
-anonymous :
-var array=[1,1,2,3,4,5];
-function (array){
-   let dup = [...new Set(array)];
-   return(dup);
- }
- (array);
+// Anonymous Function:
+var array = [1, 1, 2, 3, 4, 5];
+(function (arr) {
+  let dup = [...new Set(arr)];
+  console.log(dup);
+})(array);
 
- IIFE :
- var array=[1,1,2,3,4,5];
-(function (array){
-   let dup = [...new Set(array)];
-   return(dup);
- })
- (array);
+// IIFE:
+var array = [1, 1, 2, 3, 4, 5];
+(function (arr) {
+  let dup = [...new Set(arr)];
+  console.log(dup);
+})(array);
 
 // h.Rotate an array by k times
-anonymous :   function ( a, n, k)
-{
-    k = k % n;
-  
-    for (let i = 0; i < n; i++) {
-        if (i < k) {
-  
-           
-            console.log(a[n + i - k] + " ");
-        }
-        else {
-  
-            
-            console.log((a[i - k]) + " ");
-        }
-    }
-   
-}
-  let Array1 = [1, 2, 3, 4, 5];
-let N1 = Array.length;
-let K1= 2;
-(Array, N, K);
-
-IIFE :
+//  Anonymous Function:
 var Array = [1, 2, 3, 4, 5];
 var N = Array.length;
 var K = 2;
-(function (a, n, k)
-{
-    k = k % n;
-  
-    for (let i = 0; i < n; i++) {
-        if (i < k) {
-  
-           
-            console.log(a[n + i - k] + " ");
-        }
-        else {
-  
-            
-            console.log((a[i - k]) + " ");
-        }
+(function (a, n, k) {
+  k = k % n;
+
+  for (let i = 0; i < n; i++) {
+    if (i < k) {
+      console.log(a[n + i - k] + " ");
+    } else {
+      console.log(a[i - k] + " ");
     }
-   
-})
-(Array, N, K);
+  }
+})(Array, N, K);
+
+// IIFE:
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+(function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      console.log(arr[i]);
+    }
+  }
+}) (array);
