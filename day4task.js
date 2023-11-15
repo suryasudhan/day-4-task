@@ -1,14 +1,14 @@
 // QUESTION-1:
 // a.PRINT ODD NUMBERS IN Array
-var array=[1,2,3,4,5,6,7,8,9];
-anonymous  : ( function (array) 
-         {
-    for(var i = 0 ; i< array.length ; i++){
-          if(array[i]%2!=0){
-             console.log(array[i]);
-          } 
-     }
-  })(array);
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+(function (array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 != 0) {
+      console.log(array[i]);
+    }
+  }
+})(array);
+
 // we call this function=>
 var array=[1,2,3,4,5,6,7,8,9,];
 let abc=function (array){
@@ -20,18 +20,16 @@ let abc=function (array){
   }abc(array);
  
 
-//  IMMEDIATELY INVOKED FUNCTION Expression(IIFE)
- var array=[1,2,3,4,5,6,7,8,9];
- (function (array)
- {
-    for(var i=0; i<array.length; i++)
-    {
-      if(array[i]%2!==0)
-      {
-         console.log(array[i]);
-      }
+// IMMEDIATELY INVOKED FUNCTION Expression (IIFE)
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+(function (array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      console.log(array[i]);
     }
- })(array);
+  }
+})(array);
+
 
 
 // b.Convert all the strings to title caps in a string array
